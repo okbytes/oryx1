@@ -103,3 +103,42 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 
+
+
+
+
+// custom qmk
+
+// Shift 2 is {
+const key_override_t two_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_2, KC_LCBR);
+// Shift 3 is (
+const key_override_t three_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_3, KC_LPRN);
+// Shift 4 is [
+const key_override_t four_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_4, KC_LBRC);
+// Shift 5 is $
+const key_override_t five_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_5, KC_DLR);
+// Shift 6 is *
+const key_override_t six_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_6, KC_ASTR);
+// Shift 7 is ]
+const key_override_t seven_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_7, KC_RBRC);
+// Shift 8 is )
+const key_override_t eight_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_8, KC_RPRN);
+// Shift 9 is }
+const key_override_t nine_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_9, KC_RCBR);
+// Shift 0 is &
+const key_override_t zero_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_0, KC_AMPR);
+
+
+
+const key_override_t **key_overrides = (const key_override_t *[]){
+  &two_key_override,
+  &three_key_override,
+  &four_key_override,
+  &five_key_override,
+  &six_key_override,
+  &seven_key_override,
+  &eight_key_override,
+  &nine_key_override,
+  &zero_key_override,
+  NULL
+};
